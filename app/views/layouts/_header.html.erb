@@ -14,8 +14,9 @@
     <ul class="nav navbar-nav navbar-right">
     <% if signed_in? %>
       <li id='add-dropdown' class='dropdown'>
-        <button
+       <button
           class='dropdown-toggle navbar-btn btn btn-primary'
+          onclick="Backbone.history.navigate('#boards/new', { trigger: true })"
           data-toggle='dropdown'><span class='glyphicon glyphicon-plus'></span>
         </button>
       </li>

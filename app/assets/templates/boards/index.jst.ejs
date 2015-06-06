@@ -1,0 +1,6 @@
+<h1>My Boards Index</h1>
+<ul class="board-list">
+  <% collection.each(function (board) { %>
+    <%= board.escape('title') %>
+  <% }); %>
+</ul>

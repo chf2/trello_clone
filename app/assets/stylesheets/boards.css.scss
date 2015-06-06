@@ -1,0 +1,47 @@
+h1 {
+  color: white;
+}
+
+ul.board-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.board-index-item { 
+  border-radius: 5px;
+  padding: 10px 10px 30px 20px;
+  background-color: #EEE;
+  margin: 5px;
+}
+
+body {
+ background-color: #026aa7; 
+}
+
+.list-container {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 20px 40px;
+}
+
+.list-container:after{
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.board-show-footer {
+  clear: both;
+  a {
+    color: white;
+    font-size: 24px;
+  }
+}
+
+.new-board {
+  padding: 10px 40px;
+  border-radius: 5px;
+  background-color: white;
+  width: 400px;
+  height: 300px;
+}
