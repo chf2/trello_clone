@@ -7,6 +7,11 @@ ul.board-list {
   padding-left: 0;
 }
 
+.form-container {
+  width: 200px;
+  float: left;
+}
+
 .board-index-item { 
   border-radius: 5px;
   padding: 10px 10px 30px 20px;
@@ -19,8 +24,6 @@ body {
 }
 
 .list-container {
-  border: 1px solid white;
-  border-radius: 5px;
   padding: 20px 40px;
 }
 
