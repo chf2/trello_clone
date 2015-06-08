@@ -10,14 +10,52 @@
   min-height: 100px;
 }
 
+.new-list-form {
+  padding: 10px;
+}
+
+.new-card > input {
+  width: 170px;
+  margin: 3px auto;
+}
+
+.new-card {
+  margin-top: -5px;
+}
+
+.new-list-form input[type=text] {
+  margin-top: 5px;
+}
+
+.new-list-form input[type=submit] {
+  margin-top: -5px;
+}
+
+.new-list-form label {
+  font-size: 16px;
+  padding-bottom: 3px;
+}
+
+.second-input {
+  margin-top: 0;
+}
+
+.list-header {
+  margin-top: 7px;
+}
+
 .list-cards {
   list-style: none;
   padding-left: 0;
 }
 
-.delete-list, .add-card {
-  width: 150px;
+.delete-list, .create-card {
+  width: 170px;
   height: 30px;
   line-height: 0px;
   margin: 3px 0;
+}
+
+.delete-list {
+  margin-bottom: 8px;
 }
