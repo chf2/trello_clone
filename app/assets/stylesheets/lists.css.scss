@@ -1,5 +1,7 @@
 .list, .new-list-form {
-  float: left;
+  display: inline-block;
+  white-space: normal;
+  vertical-align: top;
   width: 200px;
   text-align: center;
   border: 1px solid #CCC;
@@ -42,11 +44,6 @@
 
 .list-header {
   margin-top: 7px;
-}
-
-.list-cards {
-  list-style: none;
-  padding-left: 0;
 }
 
 .delete-list, .create-card {

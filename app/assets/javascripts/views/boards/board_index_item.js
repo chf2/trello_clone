@@ -9,6 +9,8 @@ TrelloClone.Views.BoardIndexItem = Backbone.CompositeView.extend({
   },
 
   destroyBoard: function () {
+    var modal = new TrelloClone.Modal();
+    modal.open({ content: "<p>Howdy</p>", width: "200px", height: "200px" });
     event.preventDefault();
     this.model.destroy();
     this.remove();

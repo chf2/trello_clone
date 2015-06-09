@@ -1,10 +1,9 @@
 TrelloClone.Collections.Lists = Backbone.Collection.extend({
   url: 'api/lists',
 
-  // parse: function (resp, options) {
-  //   debugger;
-  //   return resp;
-  // },
+  comparator: function (list) {
+    return list.escape('ord');
+  },
 
   initialize: function (models, options) {
     this.board = options.board;

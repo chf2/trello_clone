@@ -2,6 +2,16 @@ h1 {
   color: white;
 }
 
+.sortable {
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+
+  li:hover {
+    cursor: pointer;
+  }
+}
+
 ul.board-list {
   list-style: none;
   padding-left: 0;
@@ -20,11 +30,22 @@ ul.board-list {
 }
 
 body {
- background-color: #026aa7; 
+  background-color: #026aa7;
+}
+
+#main, .row {
+ width: 100%;
+ padding-left: 20px;
 }
 
 .list-container {
   padding: 20px 40px;
+  width: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .list-container:after{

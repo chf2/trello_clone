@@ -18,6 +18,20 @@ TrelloClone.Views.BoardShow = Backbone.CompositeView.extend({
     var content = this.template({ board: this.model });
     this.$el.html(content);
     this.attachSubviews();
+    this.$('.sortable').sortable({
+      // cancel: '.new-list-form', TODO: This breaks input
+      start: function (event, ui) {
+        ui.item.addClass('sorting');
+      },
+      stop: function (event, ui) {
+        ui.item.removeClass('sorting');
+      },
+      update: function(event, ui) {
+        ui.item.trigger('changePos');
+      }
+    });
+    this.$('.sortable').disableSelection();
+    
     return this;
   },
 

@@ -9,6 +9,16 @@ TrelloClone.Views.ListNew = Backbone.View.extend({
 
   newList: function (event) {
     event.preventDefault();
+
+    var inputBox = this.$('form input[type=text]').eq(0)
+    if (inputBox.val() === "") {
+      inputBox.toggle('highlight');
+      window.setTimeout(function () {
+        inputBox.toggle('highlight');
+      }, 0);
+      return;
+    }
+
     var params = $(event.currentTarget).serializeJSON();
     this.$('input[type=text]').val('');
     params.list.board_id = this.model.id;

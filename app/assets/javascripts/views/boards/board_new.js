@@ -12,6 +12,16 @@ TrelloClone.Views.BoardNew = Backbone.CompositeView.extend({
 
   createBoard: function (event) {
     event.preventDefault();
+    
+    var inputBox = this.$('form input[type=text]').eq(0)
+    if (inputBox.val() === "") {
+      inputBox.toggle('highlight');
+      window.setTimeout(function () {
+        inputBox.toggle('highlight');
+      }, 0);
+      return;
+    }
+
     var params = $(event.currentTarget).serializeJSON();
     var board = new TrelloClone.Models.Board(params);
     board.save();

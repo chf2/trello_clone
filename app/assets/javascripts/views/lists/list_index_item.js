@@ -22,7 +22,12 @@ TrelloClone.Views.ListIndexItem = Backbone.CompositeView.extend({
 
   createCard: function (event) {
     event.preventDefault;
-    if (this.$('form input[type=text]').eq(0).val() === "") {
+    var inputBox = this.$('form input[type=text]').eq(0)
+    if (inputBox.val() === "") {
+      inputBox.toggle('highlight');
+      window.setTimeout(function () {
+        inputBox.toggle('highlight');
+      }, 0);
       return;
     }
     var params = this.$('form').serializeJSON();
