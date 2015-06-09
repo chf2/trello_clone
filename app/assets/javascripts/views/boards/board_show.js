@@ -2,6 +2,7 @@ TrelloClone.Views.BoardShow = Backbone.CompositeView.extend({
   template: JST['boards/show'],
 
   initialize: function () {
+    // can use initialize to change bg colors
     this.listenTo(this.model, 'sync', this.render);
     this.listenTo(this.collection, 'add', this.addList);
     this.listenTo(this.collection, 'add remove', this.render);

@@ -11,10 +11,6 @@ json.lists @board.lists do |list|
   json.ord list.ord
 
   json.cards list.cards do |card|
-    json.title card.title
-    json.description card.description
-    json.list_id card.list_id
-    json.id card.id
-    json.ord list.ord
+    json.extract! card :id, :title, :description, :list_id, :ord
   end
 end
